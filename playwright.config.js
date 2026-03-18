@@ -11,9 +11,17 @@ module.exports = defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
   },
+  reporter: [['html', { open: 'never' }]],
   webServer: {
     command: 'node server.js',
     url: 'http://localhost:5000/health',
+    env: {
+      DB_DIALECT: 'sqlite',
+      DB_STORAGE: './database/test.sqlite',
+      DB_NAME: 'test',
+      JWT_SECRET: 'test_secret',
+      PORT: '5000'
+    },
     reuseExistingServer: !process.env.CI,
     timeout: 60 * 1000
   }

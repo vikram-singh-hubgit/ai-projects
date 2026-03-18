@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>Create your account</h1>
+        <p class="subtitle">Register to get instant access.</p>
+        <form id="registerForm">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Min 6 characters" required />
+
+          <button type="submit">Register</button>
+          <div id="registerError" class="notice"></div>
+        </form>
+        <div class="helper">
+          Already have an account? <a href="/">Sign in</a>
+        </div>
+      </section>
+    </main>
+    <script src="/js/register.js"></script>
+  </body>
+</html>
